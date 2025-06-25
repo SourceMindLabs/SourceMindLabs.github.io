@@ -12,6 +12,8 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  // Disable all dynamic features
+  distDir: 'out',
 };
 
 export default nextConfig;

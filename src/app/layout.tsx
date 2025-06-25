@@ -50,9 +50,6 @@ export const metadata: Metadata = {
     description: "A research lab studying how the brain works to build better AI systems.",
     images: ["/og-image.png"],
   },
-  verification: {
-    google: "your-google-verification-code",
-  },
   metadataBase: new URL("https://sourcemindlabs.github.io"),
 };
 
