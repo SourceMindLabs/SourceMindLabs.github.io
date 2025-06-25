@@ -168,8 +168,8 @@ export default function About() {
               <h3 className="text-xl font-display font-semibold mb-3">San Hashim</h3>
               <p className="text-body font-body mb-4 font-semibold">Research Lead & Co-Founder</p>
               <p className="text-small font-body leading-relaxed text-neutral-medium">
-                Interested in how the brain learns and how we might apply these ideas to machine learning. 
-                Reads a lot of neuroscience papers and tries to connect them to AI research.
+                Curious about how brains actually learn things and spends time coding up 
+                experiments to test if we can get AI to work more like that.
               </p>
             </div>
             
