@@ -166,10 +166,10 @@ export default function About() {
                 <span className="text-white font-bold text-2xl">SH</span>
               </div>
               <h3 className="text-xl font-display font-semibold mb-3">San Hashim</h3>
-              <p className="text-body font-body mb-4 font-semibold">Research Lead & Co-Founder</p>
+              <p className="text-body font-body mb-4 font-semibold">Founder & Research Lead</p>
               <p className="text-small font-body leading-relaxed text-neutral-medium">
-                Interested in how the brain learns and how we might apply these ideas to machine learning. 
-                Reads a lot of neuroscience papers and tries to connect them to AI research.
+                Leads the research on how the brain learns and develops methods to apply these ideas to machine learning. 
+                Handles most of the technical work, from reading neuroscience papers to implementing and testing AI algorithms.
               </p>
             </div>
             
@@ -178,10 +178,10 @@ export default function About() {
                 <span className="text-white font-bold text-2xl">M</span>
               </div>
               <h3 className="text-xl font-display font-semibold mb-3">Muhammad</h3>
-              <p className="text-body font-body mb-4 font-semibold">Software Engineer & Co-Founder</p>
+              <p className="text-body font-body mb-4 font-semibold">Researcher & Co-Founder</p>
               <p className="text-small font-body leading-relaxed text-neutral-medium">
-                Writes the code to test our ideas about brain-inspired AI. Enjoys the challenge 
-                of turning research concepts into working programs.
+                Collaborates on research ideas and helps explore connections between neuroscience and AI. 
+                Contributes to understanding how brain-inspired approaches might improve machine learning.
               </p>
             </div>
           </div>

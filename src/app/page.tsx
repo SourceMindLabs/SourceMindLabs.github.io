@@ -139,10 +139,10 @@ export default function Home() {
                 <span className="text-white font-bold text-2xl">SH</span>
               </div>
               <h3 className="text-xl font-display font-semibold mb-3">San Hashim</h3>
-              <p className="text-body font-body mb-4">Research Lead & Co-Founder</p>
+              <p className="text-body font-body mb-4">Founder & Research Lead</p>
               <p className="text-small font-body text-neutral-medium">
-                Works on understanding how neural networks in the brain learn and 
-                how to apply these ideas to machine learning
+                Leads the research on understanding how neural networks in the brain learn and 
+                develops methods to apply these ideas to machine learning. Does most of the technical work.
               </p>
             </div>
             <div className="card-elegant team-card p-10 text-center hover-lift">
@@ -150,10 +150,10 @@ export default function Home() {
                 <span className="text-white font-bold text-2xl">M</span>
               </div>
               <h3 className="text-xl font-display font-semibold mb-3">Muhammad</h3>
-              <p className="text-body font-body mb-4">Software Engineer & Co-Founder</p>
+              <p className="text-body font-body mb-4">Researcher & Co-Founder</p>
               <p className="text-small font-body text-neutral-medium">
-                Builds the code and tools needed to test our ideas about 
-                brain-inspired AI systems
+                Collaborates on research ideas and helps explore connections between 
+                neuroscience and artificial intelligence systems
               </p>
             </div>
           </div>
@@ -161,7 +161,7 @@ export default function Home() {
           <div className="text-center mt-16">
             <p className="text-body-large font-body mb-8">
               Interested in this kind of research? We'd like to hear from you.
-            </p>
+            </p> 
             <button className="btn-secondary font-body">
               Get in Touch
             </button>
