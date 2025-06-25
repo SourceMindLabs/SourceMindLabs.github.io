@@ -101,7 +101,7 @@ export function Footer() {
 
         <div className="border-t border-gray-200 mt-16 pt-10 flex flex-col md:flex-row justify-between items-center">
           <p className="font-body text-gray-600 text-small">
-            © 2024 AxionLab. All rights reserved.
+            © 2025 SourceMind Labs. All rights reserved.
           </p>
           <div className="flex space-x-8 mt-6 md:mt-0">
             <Link href="/privacy" className="font-body text-gray-600 hover:text-gray-900 text-small transition-colors link-elegant">Privacy Policy</Link>

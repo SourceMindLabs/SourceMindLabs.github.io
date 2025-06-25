@@ -40,7 +40,7 @@ const Navigation = () => {
               <span className="text-white font-bold text-xl">A</span>
             </div>
             <div>
-              <div className="text-xl font-display font-bold text-gray-900">AxionLab</div>
+              <div className="text-xl font-display font-bold text-gray-900">SourceMind Labs</div>
               <div className="text-xs font-body text-gray-600">AI Research</div>
             </div>
           </Link>

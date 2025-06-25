@@ -7,7 +7,7 @@ export default function Home() {
       <section className="section-padding pt-32 hero-gradient">
         <div className="container-wide text-center">
           <h1 className="text-hero font-display mb-8">
-            AxionLab
+            SourceMind Labs
           </h1>
           <p className="text-subtitle font-body mb-8 max-w-4xl mx-auto">
             Studying how the brain works to build better AI
@@ -61,7 +61,7 @@ export default function Home() {
             </p>
           </div>
           <p className="text-body font-body mb-12 leading-relaxed">
-            AxionLab is an early-stage research lab focused on neuroscience and machine learning. 
+            SourceMind Labs is an early-stage research lab focused on neuroscience and machine learning. 
             We're interested in how biological neural networks learn and adapt, and how we can 
             use these insights to create better AI algorithms. It's still early days, but we're 
             excited about the potential.
