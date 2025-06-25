@@ -168,8 +168,7 @@ export default function About() {
               <h3 className="text-xl font-display font-semibold mb-3">San Hashim</h3>
               <p className="text-body font-body mb-4 font-semibold">Founder & Research Lead</p>
               <p className="text-small font-body leading-relaxed text-neutral-medium">
-                Leads the research on how the brain learns and develops methods to apply these ideas to machine learning. 
-                Handles most of the technical work, from reading neuroscience papers to implementing and testing AI algorithms.
+                Develops brain-inspired AI algorithms by studying how neural networks learn in biological systems. Handles the core technical implementation.
               </p>
             </div>
             

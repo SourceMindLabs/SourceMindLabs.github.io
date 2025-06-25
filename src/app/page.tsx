@@ -141,8 +141,7 @@ export default function Home() {
               <h3 className="text-xl font-display font-semibold mb-3">San Hashim</h3>
               <p className="text-body font-body mb-4">Founder & Research Lead</p>
               <p className="text-small font-body text-neutral-medium">
-                Leads the research on understanding how neural networks in the brain learn and 
-                develops methods to apply these ideas to machine learning. Does most of the technical work.
+                Develops brain-inspired AI algorithms by studying how neural networks learn in biological systems. Handles the core technical implementation.
               </p>
             </div>
             <div className="card-elegant team-card p-10 text-center hover-lift">
