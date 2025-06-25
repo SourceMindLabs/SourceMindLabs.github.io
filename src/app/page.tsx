@@ -33,7 +33,7 @@ export default function Home() {
           <div className="stats-container">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
               {[
-                { number: '2024', label: 'Started' },
+                { number: '2025', label: 'Started' },
                 { number: '2', label: 'People' },
                 { number: 'Brain + AI', label: 'Focus' },
                 { number: 'Early', label: 'Stage' }

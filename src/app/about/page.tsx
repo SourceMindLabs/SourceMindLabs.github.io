@@ -79,7 +79,7 @@ export default function About() {
           
           <div className="space-y-8">
             <p className="text-body-large font-body leading-relaxed">
-              We started AxionLab in 2024 because we think there's a lot to learn from how the brain works. 
+              We started SourceMindLabs in 2025 because we think there's a lot to learn from how the brain works. 
               Current AI systems need huge amounts of data and energy to learn things that humans can 
               pick up quickly. The brain does this with much less power and data.
             </p>

@@ -47,9 +47,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="space-y-6">
-            <h3 className="font-display text-xl font-bold text-gray-900">AxionLab</h3>
+            <h3 className="font-display text-xl font-bold text-gray-900">SourceMindLabs</h3>
             <p className="font-body text-gray-600 text-small leading-relaxed">
-              Advancing AI through neural innovation and cutting-edge research that bridges neuroscience and artificial intelligence.
+              A research lab studying how the brain works to build better AI systems through neuroscience and machine learning.
             </p>
           </div>
 
