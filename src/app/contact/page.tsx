@@ -16,8 +16,15 @@ export default function Contact() {
     e.preventDefault()
     setIsSubmitting(true)
     
-    // Simulate form submission
+    // For static sites, you can use services like:
+    // - Formspree (https://formspree.io)
+    // - Netlify Forms
+    // - EmailJS
+    // For now, we'll simulate the submission
     await new Promise(resolve => setTimeout(resolve, 1500))
+    
+    // In production, replace this with your form service
+    console.log('Form submitted:', formData)
     
     setSubmitted(true)
     setIsSubmitting(false)
