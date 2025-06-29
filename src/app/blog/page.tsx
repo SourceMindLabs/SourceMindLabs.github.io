@@ -213,7 +213,7 @@ export default function BlogPage() {
                     ))}
                   </div>
                   <Button variant="ghost" size="sm" asChild className="group-hover:text-primary">
-                    <Link href={`/blog/${post.slug}`} legacyBehavior>
+                    <Link href={`/blog/${post.slug}`}>
                       Read More
                       <ArrowRight className="ml-2 h-3 w-3 transition-transform group-hover:translate-x-1" />
                     </Link>
@@ -329,7 +329,7 @@ export default function BlogPage() {
                     )}
                   </div>
                   <Button variant="ghost" size="sm" asChild className="group-hover:text-primary">
-                    <Link href={`/blog/${post.slug}`} legacyBehavior>
+                    <Link href={`/blog/${post.slug}`}>
                       Read More
                       <ArrowRight className="ml-2 h-3 w-3 transition-transform group-hover:translate-x-1" />
                     </Link>
