@@ -98,14 +98,17 @@ export default function FeaturesPage() {
           className="text-4xl md:text-5xl font-extrabold mb-8">
           Ready to automate compliance?
         </motion.h2>
-        <Link href="/contact" passHref legacyBehavior>
-          <motion.a
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.98 }}
+        <motion.div
+          className="inline-block"
+          whileHover={{ scale: 1.05, y: -2 }}
+          whileTap={{ scale: 0.98 }}
+        >
+          <Link 
+            href="/contact"
             className="px-10 py-4 rounded-md bg-white text-brand font-semibold shadow-lg hover:shadow-xl transition-all">
             Schedule a demo
-          </motion.a>
-        </Link>
+          </Link>
+        </motion.div>
       </section>
     </div>
   );

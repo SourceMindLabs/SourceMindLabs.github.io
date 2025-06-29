@@ -80,15 +80,18 @@ export default function ResearchPage() {
           <p className="text-lg text-slate-300 max-w-2xl mx-auto mb-8">
             We partner with academic institutions and industry leaders to push the boundaries of AI research. If you're interested in working together, we'd love to connect.
           </p>
-          <Link href="/contact" passHref legacyBehavior>
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
+          <motion.div
+            className="inline-block"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <Link 
+              href="/contact"
               className="px-8 py-3 rounded-md bg-brand-orange text-white font-semibold shadow-lg hover:opacity-90 transition-all"
             >
               Get in Touch
-            </motion.a>
-          </Link>
+            </Link>
+          </motion.div>
         </div>
       </section>
     </div>
