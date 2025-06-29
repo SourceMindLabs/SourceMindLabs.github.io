@@ -9,24 +9,24 @@ import { useState } from "react"
 
 const values = [
   {
-    icon: Brain,
-    title: "Scientific Excellence",
-    description: "We pursue rigorous, reproducible research that advances the fundamental understanding of artificial intelligence and its applications."
+    icon: "🔬",
+    title: "Pioneering Research",
+    description: "We tackle fundamental questions and push the boundaries of what's possible in AI, guided by scientific rigor."
   },
   {
-    icon: Users,
-    title: "Collaborative Innovation",
-    description: "We believe the best breakthroughs come from diverse perspectives working together across disciplines and institutions."
+    icon: "🤝",
+    title: "Open Collaboration",
+    description: "We believe in the power of the community and actively share our findings, code, and models to accelerate progress."
   },
   {
-    icon: Globe,
-    title: "Open Science",
-    description: "We share our research, code, and insights openly to accelerate progress for the entire AI research community."
+    icon: "🧠",
+    title: "Neuroscience-Grounded",
+    description: "Our work is deeply rooted in principles from neuroscience, believing the brain offers the ultimate blueprint for intelligence."
   },
   {
-    icon: Lightbulb,
-    title: "Ethical AI",
-    description: "We develop AI systems that are safe, beneficial, and aligned with human values, considering long-term societal impact."
+    icon: "🌍",
+    title: "Beneficial AI",
+    description: "We are committed to developing safe, interpretable, and beneficial AI that aligns with long-term human values."
   }
 ]
 
@@ -53,194 +53,103 @@ const achievements = [
   }
 ]
 
-export default function About() {
+const team = [
+  {
+    name: "San Hashim",
+    role: "Founder & Lead Scientist",
+    bio: "San leads the lab's research in neuro-inspired architectures and reinforcement learning.",
+  },
+  {
+    name: "Muhammad",
+    role: "Principal Research Engineer",
+    bio: "Muhammad specializes in building and scaling large-scale models and AI systems.",
+  },
+];
+
+export default function AboutPage() {
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="section-padding pt-32 hero-gradient">
-        <div className="container-narrow text-center">
-          <h1 className="text-hero font-display mb-8">
-            About SourceMindLabs
-          </h1>
-          <p className="text-subtitle font-body mb-8">
-            A small research lab working on neuroscience and AI
-          </p>
+    <div className="bg-white text-slate-900">
+      {/* HERO */}
+      <section className="bg-slate-50 py-24 sm:py-32">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="font-lora text-4xl md:text-5xl font-bold tracking-tight text-slate-900"
+          >
+            Advancing AI from a new perspective.
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
+            className="mt-6 text-lg md:text-xl text-slate-700 max-w-3xl mx-auto"
+          >
+            SourceMind is an independent research lab. Our mission is to understand the principles of biological intelligence and replicate them in silicon to create more capable, general, and beneficial AI.
+          </motion.p>
         </div>
       </section>
 
-      {/* Our Story */}
-      <section className="section-padding section-white">
-        <div className="container-narrow">
-          <div className="text-center mb-16">
-            <h2 className="text-title font-display mb-6">
-              Why We Started This
+      {/* OUR VALUES */}
+      <section className="py-24 sm:py-32 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center max-w-2xl mx-auto">
+            <h2 className="font-lora text-3xl md:text-4xl font-bold text-slate-900">
+              Our Research Philosophy
             </h2>
-          </div>
-          
-          <div className="space-y-8">
-            <p className="text-body-large font-body leading-relaxed">
-              We started SourceMindLabs in 2025 because we think there's a lot to learn from how the brain works. 
-              Current AI systems need huge amounts of data and energy to learn things that humans can 
-              pick up quickly. The brain does this with much less power and data.
-            </p>
-            
-            <p className="text-body font-body leading-relaxed">
-              We're not claiming to solve everything, but we think studying how biological neural networks 
-              work could help us build better AI. It's early-stage research, and we're still figuring 
-              out a lot of things. But the basic question interests us: how does the brain learn so efficiently?
-            </p>
-            
-            <div className="quote">
-              <p className="text-body-large font-body">
-                "We're trying to understand how the brain works and see if we can use those ideas 
-                to make AI systems that are more efficient and useful."
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Research Approach */}
-      <section className="section-padding">
-        <div className="container-wide">
-          <div className="text-center mb-16">
-            <h2 className="text-title font-display mb-6">
-              How We Approach This
-            </h2>
-            <p className="text-body-large font-body max-w-3xl mx-auto">
-              Our research method is pretty straightforward
+            <p className="mt-4 text-lg text-slate-600">
+              Our work is guided by a core set of beliefs about how to build the next generation of AI.
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-            <div className="card-elegant p-8">
-              <h3 className="text-xl font-display font-semibold mb-4">Study the Brain</h3>
-              <p className="text-body font-body leading-relaxed text-neutral-medium">
-                We read neuroscience papers and try to understand how neurons connect and learn. 
-                We focus on the parts that seem most relevant to machine learning.
-              </p>
-            </div>
-            
-            <div className="card-elegant p-8">
-              <h3 className="text-xl font-display font-semibold mb-4">Build Simple Models</h3>
-              <p className="text-body font-body leading-relaxed text-neutral-medium">
-                We write code to test our ideas about how brain-like learning might work. 
-                We start simple and see what happens.
-              </p>
-            </div>
 
-            <div className="card-elegant p-8">
-              <h3 className="text-xl font-display font-semibold mb-4">Test Our Ideas</h3>
-              <p className="text-body font-body leading-relaxed text-neutral-medium">
-                We run experiments to see if our brain-inspired methods actually work better 
-                than standard approaches. Sometimes they do, sometimes they don't.
-              </p>
-            </div>
-
-            <div className="card-elegant p-8">
-              <h3 className="text-xl font-display font-semibold mb-4">Share What We Learn</h3>
-              <p className="text-body font-body leading-relaxed text-neutral-medium">
-                When we find something interesting, we'll write about it and share our code. 
-                Good research should be open and reproducible.
-              </p>
-            </div>
+          <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+            {values.map((value, idx) => (
+              <motion.div 
+                key={value.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: idx * 0.1, ease: "easeOut" }}
+                whileHover={{ y: -8, scale: 1.05 }}
+                className="text-center p-4"
+              >
+                <div className="text-4xl inline-block">{value.icon}</div>
+                <h3 className="font-lora text-xl font-bold mt-6 mb-3 text-slate-900">
+                  {value.title}
+                </h3>
+                <p className="text-slate-600">
+                  {value.description}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Our Team */}
-      <section className="section-padding section-white">
-        <div className="container-wide">
-          <div className="text-center mb-16">
-            <h2 className="text-title font-display mb-6">
-              Who We Are
+      {/* TEAM */}
+      <section className="bg-slate-50 py-24 sm:py-32">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center max-w-2xl mx-auto">
+            <h2 className="font-lora text-3xl md:text-4xl font-bold text-slate-900">
+              Our Team
             </h2>
-            <p className="text-body-large font-body max-w-3xl mx-auto">
-              Two people interested in brains and computers
+            <p className="mt-4 text-lg text-slate-600">
+              We are a small, multi-disciplinary team of scientists and engineers.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-            <div className="card-elegant p-10 text-center hover-lift">
-              <div className="w-24 h-24 logo-gradient rounded-full mx-auto mb-8 flex items-center justify-center">
-                <span className="text-white font-bold text-2xl">SH</span>
+
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-12">
+            {team.map((member) => (
+              <div key={member.name} className="text-center">
+                <div className="w-24 h-24 rounded-full bg-slate-200 mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-3xl font-bold text-slate-500">{member.name.charAt(0)}</span>
+                </div>
+                <h3 className="text-xl font-bold text-slate-900">{member.name}</h3>
+                <p className="text-brand-orange font-semibold mb-2">{member.role}</p>
+                <p className="text-slate-600">{member.bio}</p>
               </div>
-              <h3 className="text-xl font-display font-semibold mb-3">San Hashim</h3>
-              <p className="text-body font-body mb-4 font-semibold">Founder & Research Lead</p>
-              <p className="text-small font-body leading-relaxed text-neutral-medium">
-                Develops brain-inspired AI algorithms by studying how neural networks learn in biological systems. Handles the core technical implementation.
-              </p>
-            </div>
-            
-            <div className="card-elegant p-10 text-center hover-lift">
-              <div className="w-24 h-24 logo-gradient rounded-full mx-auto mb-8 flex items-center justify-center">
-                <span className="text-white font-bold text-2xl">M</span>
-              </div>
-              <h3 className="text-xl font-display font-semibold mb-3">Muhammad</h3>
-              <p className="text-body font-body mb-4 font-semibold">Researcher & Co-Founder</p>
-              <p className="text-small font-body leading-relaxed text-neutral-medium">
-                Collaborates on research ideas and helps explore connections between neuroscience and AI. 
-                Contributes to understanding how brain-inspired approaches might improve machine learning.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Current Work */}
-      <section className="section-padding">
-        <div className="container-narrow">
-          <div className="text-center mb-16">
-            <h2 className="text-title font-display mb-6">
-              What We're Working On Now
-            </h2>
-          </div>
-          
-          <div className="space-y-12">
-            <div className="text-center">
-              <h3 className="text-xl font-display font-semibold mb-4">Learning with Less Data</h3>
-              <p className="text-body font-body leading-relaxed text-neutral-medium">
-                The brain can learn new things from just a few examples. We're studying how 
-                neural plasticity works and trying to build AI that learns more like this.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <h3 className="text-xl font-display font-semibold mb-4">Efficient Neural Networks</h3>
-              <p className="text-body font-body leading-relaxed text-neutral-medium">
-                Most AI uses a lot of energy. The brain doesn't. We're looking at how biological 
-                neurons are organized and trying to make more efficient artificial networks.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <h3 className="text-xl font-display font-semibold mb-4">Understanding What AI Learns</h3>
-              <p className="text-body font-body leading-relaxed text-neutral-medium">
-                It's hard to understand what current AI systems actually learn. We think brain-inspired 
-                approaches might lead to more interpretable AI.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="section-padding section-dark">
-        <div className="relative z-10 container-narrow text-center">
-          <h2 className="text-title font-display text-white mb-8">
-            Interested in This Work?
-          </h2>
-          <p className="text-body-large font-body text-gray-300 mb-12">
-            If you're working on similar things or just curious about what we're doing, 
-            we'd be happy to chat. We're always interested in meeting other researchers.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="bg-white text-gray-900 border-none rounded-2xl px-10 py-4 font-semibold hover-lift transition-all duration-300">
-              Email Us
-            </button>
-            <button className="border-2 border-white bg-transparent text-white rounded-2xl px-10 py-4 font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-              Learn More
-            </button>
+            ))}
           </div>
         </div>
       </section>

@@ -166,7 +166,6 @@ export default function TeamPage() {
           Our diverse team brings together expertise from AI, neuroscience, and engineering.
         </p>
       </motion.div>
-
       {/* Leadership */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
@@ -218,7 +217,7 @@ export default function TeamPage() {
                   <div className="flex flex-wrap gap-2">
                     {member.links.email && (
                       <Button variant="outline" size="sm" asChild>
-                        <Link href={`mailto:${member.links.email}`}>
+                        <Link href={`mailto:${member.links.email}`} legacyBehavior>
                           <Mail className="mr-1 h-3 w-3" />
                           Email
                         </Link>
@@ -226,7 +225,7 @@ export default function TeamPage() {
                     )}
                     {member.links.website && (
                       <Button variant="outline" size="sm" asChild>
-                        <Link href={member.links.website}>
+                        <Link href={member.links.website} legacyBehavior>
                           <Globe className="mr-1 h-3 w-3" />
                           Website
                         </Link>
@@ -234,7 +233,7 @@ export default function TeamPage() {
                     )}
                     {member.links.scholar && (
                       <Button variant="outline" size="sm" asChild>
-                        <Link href={member.links.scholar}>
+                        <Link href={member.links.scholar} legacyBehavior>
                           <BookOpen className="mr-1 h-3 w-3" />
                           Scholar
                         </Link>
@@ -242,7 +241,7 @@ export default function TeamPage() {
                     )}
                     {member.links.github && (
                       <Button variant="outline" size="sm" asChild>
-                        <Link href={member.links.github}>
+                        <Link href={member.links.github} legacyBehavior>
                           <Github className="mr-1 h-3 w-3" />
                           GitHub
                         </Link>
@@ -255,7 +254,6 @@ export default function TeamPage() {
           ))}
         </div>
       </motion.section>
-
       {/* Research Team */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
@@ -310,28 +308,28 @@ export default function TeamPage() {
                   <div className="flex flex-wrap gap-1">
                     {member.links.email && (
                       <Button variant="outline" size="sm" asChild>
-                        <Link href={`mailto:${member.links.email}`}>
+                        <Link href={`mailto:${member.links.email}`} legacyBehavior>
                           <Mail className="h-3 w-3" />
                         </Link>
                       </Button>
                     )}
                     {member.links.website && (
                       <Button variant="outline" size="sm" asChild>
-                        <Link href={member.links.website}>
+                        <Link href={member.links.website} legacyBehavior>
                           <Globe className="h-3 w-3" />
                         </Link>
                       </Button>
                     )}
                     {member.links.scholar && (
                       <Button variant="outline" size="sm" asChild>
-                        <Link href={member.links.scholar}>
+                        <Link href={member.links.scholar} legacyBehavior>
                           <BookOpen className="h-3 w-3" />
                         </Link>
                       </Button>
                     )}
                     {member.links.github && (
                       <Button variant="outline" size="sm" asChild>
-                        <Link href={member.links.github}>
+                        <Link href={member.links.github} legacyBehavior>
                           <Github className="h-3 w-3" />
                         </Link>
                       </Button>
@@ -343,7 +341,6 @@ export default function TeamPage() {
           ))}
         </div>
       </motion.section>
-
       {/* Join Our Team */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
@@ -365,5 +362,5 @@ export default function TeamPage() {
         </div>
       </motion.section>
     </div>
-  )
+  );
 } 

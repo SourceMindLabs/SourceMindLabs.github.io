@@ -1,19 +1,29 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Lora } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/navigation";
-import { Footer } from "@/components/footer";
-import Script from "next/script";
+import Footer from "@/components/footer";
+import SmoothScroll from "@/components/SmoothScroll";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
+const lora = Lora({ subsets: ["latin"], weight: ['400', '500', '600', '700'], variable: '--font-lora' });
 
 export const metadata: Metadata = {
   title: {
-    default: "SourceMindLabs | Neuroscience-Inspired AI Research",
+    default: "SourceMindLabs | Revolutionary Neural Architecture",
     template: "%s | SourceMindLabs"
   },
-  description: "A research lab studying how the brain works to build better AI systems. We combine neuroscience insights with machine learning to create more efficient artificial intelligence.",
-  keywords: ["neuroscience", "artificial intelligence", "AI research", "brain-inspired AI", "machine learning", "neural networks", "computational neuroscience"],
+  description: "Revolutionary research in neural architecture where biological intelligence meets computational engineering.",
+  keywords: [
+    "neural architecture", 
+    "biological intelligence", 
+    "computational engineering", 
+    "living systems", 
+    "architectural AI", 
+    "spatial algorithms", 
+    "structural intelligence",
+    "revolutionary research"
+  ],
   authors: [{ name: "SourceMindLabs" }],
   creator: "SourceMindLabs",
   publisher: "SourceMindLabs",
@@ -23,21 +33,21 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://sourcemindlabs.github.io",
     siteName: "SourceMindLabs",
-    title: "SourceMindLabs | Neuroscience-Inspired AI Research",
-    description: "A research lab studying how the brain works to build better AI systems.",
+    title: "SourceMindLabs | Revolutionary Neural Architecture Research",
+    description: "Revolutionary research in neural architecture where biological intelligence meets computational engineering through living systems.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "SourceMindLabs - Neuroscience-Inspired AI Research",
+        alt: "SourceMindLabs - Revolutionary Neural Architecture Research",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SourceMindLabs | Neuroscience-Inspired AI Research",
-    description: "A research lab studying how the brain works to build better AI systems.",
+    title: "SourceMindLabs | Revolutionary Neural Architecture Research",
+    description: "Revolutionary research in neural architecture where biological intelligence meets computational engineering through living systems.",
     images: ["/og-image.png"],
   },
   metadataBase: new URL("https://sourcemindlabs.github.io"),
@@ -54,43 +64,14 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
-        <meta name="theme-color" content="#8b7355" />
+        <meta name="theme-color" content="#ffffff" />
       </head>
-      <body className={inter.className}>
-        {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'GA_MEASUREMENT_ID');
-          `}
-        </Script>
-
-        {/* Web Vitals Monitoring */}
-        <Script id="web-vitals" strategy="afterInteractive">
-          {`
-            function sendToAnalytics(metric) {
-              // Send to your analytics service
-              console.log('Web Vital:', metric);
-            }
-            
-            // Monitor Core Web Vitals - simplified for static export
-            if (typeof window !== 'undefined' && 'performance' in window) {
-              window.addEventListener('load', () => {
-                console.log('Page loaded successfully');
-              });
-            }
-          `}
-        </Script>
-
-        <Navigation />
-        <main>{children}</main>
-        <Footer />
+      <body className={`${inter.variable} ${lora.variable} font-sans bg-white text-slate-900 antialiased`}>
+        <SmoothScroll>
+          <Navigation />
+          {children}
+          <Footer />
+        </SmoothScroll>
       </body>
     </html>
   );

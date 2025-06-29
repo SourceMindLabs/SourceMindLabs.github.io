@@ -1,115 +1,141 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from 'react'
-import Link from 'next/link'
+import Link from 'next/link';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
-const Navigation = () => {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+export default function Navigation() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+      // A slight threshold to prevent the shadow from appearing on tiny scrolls
+      setIsScrolled(window.scrollY > 10);
+    };
 
-  const navItems = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-  ]
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Set initial state
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navLinks = [
+    { href: '/research', label: 'Research' },
+    { href: '/about', label: 'About' },
+    { href: '/careers', label: 'Careers' },
+    { href: '/contact', label: 'Contact' }
+  ];
 
   return (
-    <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled 
-          ? 'nav-glass shadow-strong' 
-          : 'bg-transparent'
-      }`}
-    >
-      <div className="container-wide">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link 
-            href="/" 
-            className="flex items-center space-x-4 hover-lift"
-          >
-            <div className="w-12 h-12 logo-gradient rounded-2xl flex items-center justify-center shadow-medium">
-              <span className="text-white font-bold text-xl">A</span>
-            </div>
-            <div>
-              <div className="text-xl font-display font-bold text-gray-900">SourceMind Labs</div>
-              <div className="text-xs font-body text-gray-600">AI Research</div>
-            </div>
+    <>
+      <motion.header 
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled 
+            ? 'bg-white/80 backdrop-blur-md shadow-sm border-b border-slate-200/80' 
+            : 'bg-white'
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+          <Link href="/" className="group">
+            <h1 className="text-3xl font-bold text-slate-900 tracking-tight">
+              SourceMind
+            </h1>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-10">
-            {navItems.map((item) => (
+          <nav className="hidden lg:flex items-center space-x-8">
+            {navLinks.map((link, index) => (
               <Link
-                key={item.name}
-                href={item.href}
-                className="text-gray-700 font-body hover:text-gray-900 transition-all duration-300 link-underline text-lg"
-              >
-                {item.name}
+                key={link.href}
+                href={link.href}
+                className="relative group">
+                <span className="text-slate-700 hover:text-brand-orange font-medium transition-colors duration-300">
+                  {link.label}
+                </span>
+                <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-brand-orange transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-center"></div>
               </Link>
             ))}
             
-            {/* CTA Button */}
-            <button className="btn-primary font-body ml-6">
-              Get Started
-            </button>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="inline-flex items-center justify-center p-3 rounded-2xl text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 transition-all duration-300"
+            <div className="w-px h-5 bg-slate-200" />
+            
+            <motion.div
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.98 }}
             >
-              <span className="sr-only">Open main menu</span>
-              <div className="relative w-6 h-6">
-                <div className={`absolute w-6 h-0.5 bg-current rounded transition-all duration-300 ${
-                  isMobileMenuOpen ? 'rotate-45 top-3' : 'top-1'
-                }`}></div>
-                <div className={`absolute w-6 h-0.5 bg-current rounded top-3 transition-all duration-300 ${
-                  isMobileMenuOpen ? 'opacity-0' : 'opacity-100'
-                }`}></div>
-                <div className={`absolute w-6 h-0.5 bg-current rounded transition-all duration-300 ${
-                  isMobileMenuOpen ? '-rotate-45 top-3' : 'top-5'
-                }`}></div>
-              </div>
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Navigation */}
-        <div className={`md:hidden transition-all duration-500 ${
-          isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-        } overflow-hidden`}>
-          <div className="px-4 pt-4 pb-8 space-y-2 bg-white rounded-3xl mt-6 shadow-strong border border-gray-100">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="block px-6 py-4 rounded-2xl text-gray-700 font-body hover:text-gray-900 hover:bg-gray-50 transition-all duration-300"
-                onClick={() => setIsMobileMenuOpen(false)}
+              <Link 
+                href="/contact"
+                className="border border-slate-800 text-slate-800 px-5 py-2 rounded-md font-semibold tracking-wide transition-all duration-300 shadow-sm hover:bg-slate-800 hover:text-white"
               >
-                {item.name}
+                Get in Touch
               </Link>
-            ))}
-            <div className="px-6 pt-6">
-              <button className="w-full btn-primary font-body">
-                Get Started
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-  )
-}
+            </motion.div>
+          </nav>
 
-export default Navigation 
+          {/* Mobile Menu Button */}
+          <motion.button
+            whileTap={{ scale: 0.95 }}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="lg:hidden w-10 h-10 flex flex-col justify-center items-center space-y-1.5 group"
+            aria-label="Open menu"
+          >
+            <motion.div 
+              animate={isMobileMenuOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
+              className="w-6 h-0.5 bg-slate-800"
+            />
+            <motion.div 
+              animate={isMobileMenuOpen ? { opacity: 0 } : { opacity: 1 }}
+              className="w-6 h-0.5 bg-slate-800"
+            />
+            <motion.div 
+              animate={isMobileMenuOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
+              className="w-6 h-0.5 bg-slate-800"
+            />
+          </motion.button>
+        </div>
+      </motion.header>
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.2 }}
+            className="fixed top-16 left-0 right-0 z-40 lg:hidden bg-white/95 backdrop-blur-md shadow-lg border-b border-slate-200"
+          >
+            <div className="max-w-7xl mx-auto px-6 py-8">
+              <nav className="flex flex-col items-center space-y-8">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-2xl font-semibold text-slate-800 hover:text-brand-orange transition-colors duration-300">
+                      {link.label}
+                  </Link>
+                ))}
+                
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full"
+                >
+                  <Link 
+                    href="/contact"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block w-full text-center bg-slate-900 text-white px-8 py-3 rounded-md font-semibold tracking-wide shadow-lg text-lg"
+                  >
+                    Get in Touch
+                  </Link>
+                </motion.div>
+              </nav>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+} 

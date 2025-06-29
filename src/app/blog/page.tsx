@@ -150,7 +150,6 @@ export default function BlogPage() {
           Dive deep into our latest discoveries and learn from our experiences.
         </p>
       </motion.div>
-
       {/* Featured Posts */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
@@ -214,7 +213,7 @@ export default function BlogPage() {
                     ))}
                   </div>
                   <Button variant="ghost" size="sm" asChild className="group-hover:text-primary">
-                    <Link href={`/blog/${post.slug}`}>
+                    <Link href={`/blog/${post.slug}`} legacyBehavior>
                       Read More
                       <ArrowRight className="ml-2 h-3 w-3 transition-transform group-hover:translate-x-1" />
                     </Link>
@@ -225,7 +224,6 @@ export default function BlogPage() {
           ))}
         </div>
       </motion.section>
-
       {/* Search and Filter */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
@@ -265,7 +263,6 @@ export default function BlogPage() {
           </div>
         </div>
       </motion.section>
-
       {/* All Posts */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
@@ -332,7 +329,7 @@ export default function BlogPage() {
                     )}
                   </div>
                   <Button variant="ghost" size="sm" asChild className="group-hover:text-primary">
-                    <Link href={`/blog/${post.slug}`}>
+                    <Link href={`/blog/${post.slug}`} legacyBehavior>
                       Read More
                       <ArrowRight className="ml-2 h-3 w-3 transition-transform group-hover:translate-x-1" />
                     </Link>
@@ -350,5 +347,5 @@ export default function BlogPage() {
         )}
       </motion.section>
     </div>
-  )
+  );
 } 
