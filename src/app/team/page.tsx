@@ -217,7 +217,7 @@ export default function TeamPage() {
                   <div className="flex flex-wrap gap-2">
                     {member.links.email && (
                       <Button variant="outline" size="sm" asChild>
-                        <Link href={`mailto:${member.links.email}`} legacyBehavior>
+                        <Link href={`mailto:${member.links.email}`}>
                           <Mail className="mr-1 h-3 w-3" />
                           Email
                         </Link>
@@ -225,7 +225,7 @@ export default function TeamPage() {
                     )}
                     {member.links.website && (
                       <Button variant="outline" size="sm" asChild>
-                        <Link href={member.links.website} legacyBehavior>
+                        <Link href={member.links.website}>
                           <Globe className="mr-1 h-3 w-3" />
                           Website
                         </Link>
@@ -233,7 +233,7 @@ export default function TeamPage() {
                     )}
                     {member.links.scholar && (
                       <Button variant="outline" size="sm" asChild>
-                        <Link href={member.links.scholar} legacyBehavior>
+                        <Link href={member.links.scholar}>
                           <BookOpen className="mr-1 h-3 w-3" />
                           Scholar
                         </Link>
@@ -241,9 +241,25 @@ export default function TeamPage() {
                     )}
                     {member.links.github && (
                       <Button variant="outline" size="sm" asChild>
-                        <Link href={member.links.github} legacyBehavior>
+                        <Link href={member.links.github}>
                           <Github className="mr-1 h-3 w-3" />
                           GitHub
+                        </Link>
+                      </Button>
+                    )}
+                    {member.links.twitter && (
+                      <Button variant="outline" size="sm" asChild>
+                        <Link href={member.links.twitter}>
+                          <Twitter className="mr-1 h-3 w-3" />
+                          Twitter
+                        </Link>
+                      </Button>
+                    )}
+                    {member.links.linkedin && (
+                      <Button variant="outline" size="sm" asChild>
+                        <Link href={member.links.linkedin}>
+                          <Linkedin className="mr-1 h-3 w-3" />
+                          LinkedIn
                         </Link>
                       </Button>
                     )}
@@ -305,32 +321,46 @@ export default function TeamPage() {
                   </div>
                   
                   {/* Links */}
-                  <div className="flex flex-wrap gap-1">
+                  <div className="flex flex-wrap gap-2">
                     {member.links.email && (
                       <Button variant="outline" size="sm" asChild>
-                        <Link href={`mailto:${member.links.email}`} legacyBehavior>
+                        <Link href={`mailto:${member.links.email}`}>
                           <Mail className="h-3 w-3" />
                         </Link>
                       </Button>
                     )}
                     {member.links.website && (
                       <Button variant="outline" size="sm" asChild>
-                        <Link href={member.links.website} legacyBehavior>
+                        <Link href={member.links.website}>
                           <Globe className="h-3 w-3" />
                         </Link>
                       </Button>
                     )}
                     {member.links.scholar && (
                       <Button variant="outline" size="sm" asChild>
-                        <Link href={member.links.scholar} legacyBehavior>
+                        <Link href={member.links.scholar}>
                           <BookOpen className="h-3 w-3" />
                         </Link>
                       </Button>
                     )}
                     {member.links.github && (
                       <Button variant="outline" size="sm" asChild>
-                        <Link href={member.links.github} legacyBehavior>
+                        <Link href={member.links.github}>
                           <Github className="h-3 w-3" />
+                        </Link>
+                      </Button>
+                    )}
+                    {member.links.twitter && (
+                      <Button variant="outline" size="sm" asChild>
+                        <Link href={member.links.twitter}>
+                          <Twitter className="h-3 w-3" />
+                        </Link>
+                      </Button>
+                    )}
+                    {member.links.linkedin && (
+                      <Button variant="outline" size="sm" asChild>
+                        <Link href={member.links.linkedin}>
+                          <Linkedin className="h-3 w-3" />
                         </Link>
                       </Button>
                     )}
