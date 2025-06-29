@@ -42,8 +42,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="hover:text-slate-900 hover:underline underline-offset-2 transition-colors"
-                    legacyBehavior>
+                    className="hover:text-slate-900 hover:underline underline-offset-2 transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -57,8 +56,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="hover:text-slate-900 hover:underline underline-offset-2 transition-colors"
-                    legacyBehavior>
+                    className="hover:text-slate-900 hover:underline underline-offset-2 transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -76,8 +74,7 @@ export default function Footer() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-slate-500 hover:text-slate-900 text-sm transition-colors"
-                legacyBehavior>
+                className="text-slate-500 hover:text-slate-900 text-sm transition-colors">
                 {link.label}
               </Link>
             ))}
