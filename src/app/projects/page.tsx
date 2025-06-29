@@ -223,7 +223,7 @@ export default function ProjectsPage() {
                       <div className="flex flex-wrap gap-3">
                         {project.links.github && (
                           <Button variant="outline" asChild>
-                            <Link href={project.links.github} legacyBehavior>
+                            <Link href={project.links.github}>
                               <Github className="mr-2 h-4 w-4" />
                               GitHub
                             </Link>
@@ -231,7 +231,7 @@ export default function ProjectsPage() {
                         )}
                         {project.links.demo && (
                           <Button variant="neural" asChild>
-                            <Link href={project.links.demo} legacyBehavior>
+                            <Link href={project.links.demo}>
                               <Play className="mr-2 h-4 w-4" />
                               Live Demo
                             </Link>
@@ -239,7 +239,7 @@ export default function ProjectsPage() {
                         )}
                         {project.links.paper && (
                           <Button variant="outline" asChild>
-                            <Link href={project.links.paper} legacyBehavior>
+                            <Link href={project.links.paper}>
                               <ExternalLink className="mr-2 h-4 w-4" />
                               Paper
                             </Link>
@@ -325,7 +325,7 @@ export default function ProjectsPage() {
                   <div className="flex gap-2">
                     {project.links.github && (
                       <Button variant="outline" size="sm" asChild>
-                        <Link href={project.links.github} legacyBehavior>
+                        <Link href={project.links.github}>
                           <Github className="mr-1 h-3 w-3" />
                           Code
                         </Link>
@@ -333,7 +333,7 @@ export default function ProjectsPage() {
                     )}
                     {project.links.demo && (
                       <Button variant="outline" size="sm" asChild>
-                        <Link href={project.links.demo} legacyBehavior>
+                        <Link href={project.links.demo}>
                           <Play className="mr-1 h-3 w-3" />
                           Demo
                         </Link>
